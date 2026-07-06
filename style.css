@@ -366,3 +366,25 @@ nav a:hover{
     color:#555;
     line-height:1.7;
 }
+
+.stats{
+    background:#2563EB;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.stat{
+    margin:20px;
+}
+
+.stat h2{
+    font-size:42px;
+}
+
+.stat p{
+    font-size:18px;
+}
