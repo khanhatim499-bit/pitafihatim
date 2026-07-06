@@ -259,3 +259,70 @@ nav a:hover{
     color:#555;
     line-height:1.6;
 }
+
+.featured{
+    padding:70px 8%;
+    background:#ffffff;
+}
+
+.featured h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#111827;
+}
+
+.article-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.article-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.article-card:hover{
+    transform:translateY(-8px);
+}
+
+.article-card img{
+    width:100%;
+    display:block;
+}
+
+.article-content{
+    padding:20px;
+}
+
+.article-content small{
+    color:#777;
+}
+
+.article-content h3{
+    margin:12px 0;
+    color:#2563EB;
+}
+
+.article-content p{
+    color:#555;
+    line-height:1.6;
+}
+
+.read-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#2563EB;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+.read-btn:hover{
+    background:#111827;
+}
