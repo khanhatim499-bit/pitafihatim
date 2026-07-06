@@ -215,3 +215,47 @@ nav a:hover{
     background:#111827;
     color:white;
 }
+
+.categories{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:36px;
+    margin-bottom:40px;
+    color:#111827;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:0.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.category-card span{
+    font-size:48px;
+}
+
+.category-card h3{
+    margin:15px 0;
+    color:#2563EB;
+}
+
+.category-card p{
+    color:#555;
+    line-height:1.6;
+}
