@@ -105,13 +105,18 @@ footer{
     color:white;
 }
 
-.hero{
-    padding:40px 20px;
-    background:#0077cc;
-    color:white;
-    border-radius:10px;
-    margin-bottom:30px;
-}
+<section class="hero">
+
+    <h1>Learn Mathematics, Programming & AI</h1>
+
+    <p>
+        Free tutorials, notes, coding guides,
+        and online earning tips—all in one place.
+    </p>
+
+    <a href="blog.html" class="btn">Start Learning</a>
+
+</section>
 
 .logo{
     width:100px;
