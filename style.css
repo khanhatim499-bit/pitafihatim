@@ -419,3 +419,52 @@ nav a:hover{
     color:#555;
     margin-bottom:25px;
 }
+
+.newsletter{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.newsletter h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.newsletter p{
+    margin-bottom:30px;
+}
+
+.newsletter input{
+    width:320px;
+    max-width:90%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+.newsletter button{
+    background:#2563EB;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h2{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#ccc;
+    margin:10px 0;
+}
