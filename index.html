@@ -1,253 +1,898 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hatim's Website</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PitaFi Hatim | Learn Mathematics, Programming & AI</title>
+
+<meta name="description" content="Free Mathematics, Programming, Artificial Intelligence and Online Earning tutorials.">
+
+<meta name="keywords" content="Mathematics, Programming, HTML, CSS, JavaScript, AI, Online Earning">
+
+<meta name="author" content="Hatim">
+
+<meta name="theme-color" content="#2563EB">
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header class="navbar">
+<header class="header">
 
-    <div class="logo-area">
-        <img src="logo.png" class="logo" alt="Logo">
-        <h2>PitaFi Hatim</h2>
-    </div>
+<div class="container">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<a href="index.html" class="brand">
+
+<img src="images/logo.png" alt="PitaFi Hatim Logo">
+
+<span>PitaFi Hatim</span>
+
+</a>
+
+<nav id="navbar">
+
+<ul>
+
+<li><a class="active" href="index.html">Home</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<input
+type="search"
+placeholder="Search articles..."
+class="search">
+
+<button id="themeToggle" aria-label="Toggle dark mode">
+
+🌙
+
+</button>
+
+<button id="menuBtn" aria-label="Menu">
+
+☰
+
+</button>
+
+</div>
+
+</div>
 
 </header>
 
-<div style="text-align:center; margin:15px;">
-    <button onclick="toggleTheme()">🌙 Dark Mode</button>
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-text">
+
+<p class="tag">
+
+WELCOME TO PITAFI HATIM
+
+</p>
+
+<h1>
+
+Learn Mathematics,
+Programming,
+Artificial Intelligence
+and Digital Skills.
+
+</h1>
+
+<p>
+
+High-quality tutorials, university notes,
+coding guides, AI resources,
+and practical online earning content —
+all in one place.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="blog.html" class="btn">
+
+Start Learning
+
+</a>
+
+<a href="about.html" class="btn-outline">
+
+About Me
+
+</a>
+
 </div>
 
-<main>
-    <h2>Welcome!</h2>
-    <p>This website is built using only my Android phone.</p>
+<div class="hero-stats">
 
-    <button onclick="sayHello()">Say Hello</button>
-    
-    <section class="hero">
-    <h2>Build Your Future Online</h2>
-    <p>Learn Programming, Mathematics, AI, and Ways to Earn Online.</p>
-</section>
+<div>
 
-    <section class="categories">
+<h2>100+</h2>
 
-    <h2>Explore Categories</h2>
+<span>Articles Goal</span>
 
-    <div class="category-grid">
+</div>
 
-        <div class="category-card">
-            <span>📐</span>
-            <h3>Mathematics</h3>
-            <p>Notes, formulas, solved examples, and exam preparation.</p>
-        </div>
+<div>
 
-        <div class="category-card">
-            <span>💻</span>
-            <h3>Programming</h3>
-            <p>HTML, CSS, JavaScript, Python, C++, and more.</p>
-        </div>
+<h2>50+</h2>
 
-        <div class="category-card">
-            <span>🤖</span>
-            <h3>Artificial Intelligence</h3>
-            <p>Learn AI tools, machine learning, and ChatGPT.</p>
-        </div>
+<span>Tutorials</span>
 
-        <div class="category-card">
-            <span>💰</span>
-            <h3>Online Earning</h3>
-            <p>Freelancing, blogging, affiliate marketing, and more.</p>
-        </div>
+</div>
 
-        <div class="category-card">
-            <span>📚</span>
-            <h3>Tutorials</h3>
-            <p>Easy step-by-step guides for beginners.</p>
-        </div>
+<div>
 
-        <div class="category-card">
-            <span>📰</span>
-            <h3>Latest Articles</h3>
-            <p>Read the newest posts and educational updates.</p>
-        </div>
+<h2>10+</h2>
 
-    </div>
+<span>Categories</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="images/hero.png"
+alt="Learning Illustration">
+
+</div>
+
+</div>
 
 </section>
 
-    <section class="featured">
+<section class="section">
 
-    <h2>Featured Articles</h2>
+<div class="container">
 
-    <div class="article-grid">
+<div class="section-title">
 
-        <div class="article-card">
-            <img src="https://picsum.photos/400/250?random=1" alt="Mathematics">
-            <div class="article-content">
-                <small>July 2026</small>
-                <h3>Top 10 Mathematics Tips for Students</h3>
-                <p>Simple techniques to improve problem-solving and exam performance.</p>
-                <a href="blog.html" class="read-btn">Read More</a>
-            </div>
-        </div>
+<h2>
 
-        <div class="article-card">
-            <img src="https://picsum.photos/400/250?random=2" alt="Programming">
-            <div class="article-content">
-                <small>July 2026</small>
-                <h3>Learn HTML & CSS from Scratch</h3>
-                <p>Build your first responsive website using only HTML and CSS.</p>
-                <a href="blog.html" class="read-btn">Read More</a>
-            </div>
-        </div>
+Explore Categories
 
-        <div class="article-card">
-            <img src="https://picsum.photos/400/250?random=3" alt="AI">
-            <div class="article-content">
-                <small>July 2026</small>
-                <h3>Beginner's Guide to Artificial Intelligence</h3>
-                <p>Understand AI, machine learning, and useful AI tools.</p>
-                <a href="blog.html" class="read-btn">Read More</a>
-            </div>
-        </div>
+</h2>
 
-    </div>
+<p>
 
-    </section>
+Choose a topic and start learning today.
 
-    <section class="why-us">
+</p>
 
-    <h2>Why Choose PitaFi Hatim?</h2>
+</div>
 
-    <div class="why-grid">
+<div class="cards">
 
-        <div class="why-card">
-            <h3>🎓 Quality Learning</h3>
-            <p>Clear explanations with practical examples for students and beginners.</p>
-        </div>
+<div class="card">
 
-        <div class="why-card">
-            <h3>📱 Mobile Friendly</h3>
-            <p>Designed to work smoothly on phones, tablets, and computers.</p>
-        </div>
+<div class="icon">📐</div>
 
-        <div class="why-card">
-            <h3>🚀 Regular Updates</h3>
-            <p>New tutorials, articles, and learning resources added regularly.</p>
-        </div>
+<h3>Mathematics</h3>
 
-    </div>
+<p>
 
-    </section>
+Notes, formulas, solved examples,
+assignments and exam preparation.
 
-    <section class="stats">
+</p>
 
-    <div class="stat">
-        <h2>100+</h2>
-        <p>Articles</p>
-    </div>
+<a href="blog.html">
 
-    <div class="stat">
-        <h2>50+</h2>
-        <p>Tutorials</p>
-    </div>
+Learn More →
 
-    <div class="stat">
-        <h2>10+</h2>
-        <p>Categories</p>
-    </div>
+</a>
 
-    <div class="stat">
-        <h2>1000+</h2>
-        <p>Visitors Goal</p>
-    </div>
+</div>
 
-    </section>
+<div class="card">
 
-    <section class="founder">
+<div class="icon">💻</div>
 
-    <div class="founder-image">
-        <img src="logo.png" alt="Hatim">
-    </div>
+<h3>Programming</h3>
 
-    <div class="founder-text">
-        <h2>Meet the Founder</h2>
+<p>
 
-        <p>
-            Hi! I'm Hatim, the creator of PitaFi Hatim.
-            My mission is to provide free, high-quality learning resources
-            in Mathematics, Programming, Artificial Intelligence,
-            and Online Earning for students around the world.
-        </p>
+HTML, CSS, JavaScript,
+Python, C++, Java and more.
 
-        <a href="about.html" class="btn">Read My Story</a>
+</p>
 
-    </div>
+<a href="blog.html">
 
-    </section>
+Learn More →
 
-    <section class="newsletter">
+</a>
 
-    <h2>Stay Updated</h2>
+</div>
 
-    <p>Subscribe to receive new tutorials and articles.</p>
+<div class="card">
 
-    <form>
+<div class="icon">🤖</div>
 
-        <input
-            type="email"
-            placeholder="Enter your email">
+<h3>Artificial Intelligence</h3>
 
-        <button type="submit">
-            Subscribe
-        </button>
+<p>
 
-    </form>
+Machine Learning,
+ChatGPT,
+AI tools and automation.
 
-    </section>
-    <section class="cards">
-    <div class="card">
-        <h3>📚 Education</h3>
-        <p>Study notes, mathematics, and learning resources.</p>
-    </div>
+</p>
 
-    <div class="card">
-        <h3>💻 Technology</h3>
-        <p>Programming, AI, and website tutorials.</p>
-    </div>
+<a href="blog.html">
 
-    <div class="card">
-        <h3>💰 Earn Online</h3>
-        <p>Learn different ways to make money online.</p>
-    </div>
+Learn More →
+
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>Online Earning</h3>
+
+<p>
+
+Freelancing,
+Blogging,
+Affiliate Marketing
+and Digital Skills.
+
+</p>
+
+<a href="blog.html">
+
+Learn More →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-</main>
+
+    <section class="section light">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Featured Articles
+
+</h2>
+
+<p>
+
+Read our latest educational articles.
+
+</p>
+
+</div>
+
+<div class="article-grid">
+
+<article class="article-card">
+
+<img src="images/math.jpg" alt="Mathematics">
+
+<div class="article-content">
+
+<span class="badge">
+
+Mathematics
+
+</span>
+
+<h3>
+
+Top 10 Mathematics Tips for University Students
+
+</h3>
+
+<p>
+
+Improve your problem-solving skills and prepare effectively for exams.
+
+</p>
+
+<a href="blog.html" class="read-more">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/programming.jpg" alt="Programming">
+
+<div class="article-content">
+
+<span class="badge">
+
+Programming
+
+</span>
+
+<h3>
+
+Complete HTML & CSS Roadmap for Beginners
+
+</h3>
+
+<p>
+
+Learn how to build responsive websites from scratch.
+
+</p>
+
+<a href="blog.html" class="read-more">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/ai.jpg" alt="Artificial Intelligence">
+
+<div class="article-content">
+
+<span class="badge">
+
+Artificial Intelligence
+
+</span>
+
+<h3>
+
+Getting Started with Artificial Intelligence
+
+</h3>
+
+<p>
+
+Discover AI tools, machine learning concepts and practical applications.
+
+</p>
+
+<a href="blog.html" class="read-more">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Why Choose PitaFi Hatim?
+
+</h2>
+
+<p>
+
+Helping students succeed through quality learning resources.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">
+
+🎓
+
+</div>
+
+<h3>
+
+Quality Education
+
+</h3>
+
+<p>
+
+Well-structured tutorials with clear explanations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+
+📱
+
+</div>
+
+<h3>
+
+Mobile Friendly
+
+</h3>
+
+<p>
+
+Study comfortably on your phone, tablet or computer.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+
+⚡
+
+</div>
+
+<h3>
+
+Always Updated
+
+</h3>
+
+<p>
+
+Fresh articles, tutorials and educational resources.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+
+🌍
+
+</div>
+
+<h3>
+
+Free Learning
+
+</h3>
+
+<p>
+
+Access useful educational content without cost.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="statistics">
+
+<div class="container stats-grid">
+
+<div class="stat-box">
+
+<h2>
+
+100+
+
+</h2>
+
+<p>
+
+Articles Goal
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>
+
+50+
+
+</h2>
+
+<p>
+
+Tutorials
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>
+
+10+
+
+</h2>
+
+<p>
+
+Learning Categories
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>
+
+1000+
+
+</h2>
+
+<p>
+
+Future Community Members
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section light">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Student Testimonials
+
+</h2>
+
+<p>
+
+Our vision for learners using PitaFi Hatim.
+
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<p>
+
+"This platform makes difficult concepts much easier to understand."
+
+</p>
+
+<h4>
+
+— Future Student
+
+</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+
+"I look forward to learning programming and AI from this website."
+
+</p>
+
+<h4>
+
+— Aspiring Developer
+
+</h4>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+
+"A clean, simple website focused on helping students grow."
+
+</p>
+
+<h4>
+
+— Mathematics Enthusiast
+
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+    <section class="section">
+
+<div class="container founder">
+
+<div class="founder-image">
+
+<img src="images/logo.png" alt="Hatim">
+
+</div>
+
+<div class="founder-content">
+
+<h2>Meet the Founder</h2>
+
+<p>
+
+Hello! I'm <strong>Hatim</strong>, the creator of
+<strong>PitaFi Hatim</strong>.
+
+My mission is to provide free, high-quality educational
+content in Mathematics, Programming, Artificial Intelligence,
+and Digital Skills.
+
+I believe education should be accessible to everyone,
+and this platform is built to help students learn with
+simple explanations and practical examples.
+
+</p>
+
+<a href="about.html" class="btn">
+
+Read My Story
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2>
+
+Join Our Newsletter
+
+</h2>
+
+<p>
+
+Receive the latest tutorials and educational articles directly in your inbox.
+
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email"
+required>
+
+<button type="submit">
+
+Subscribe
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="contact-banner">
+
+<div class="container">
+
+<h2>
+
+Have a Question?
+
+</h2>
+
+<p>
+
+Feel free to contact us anytime.
+
+</p>
+
+<a href="contact.html" class="btn">
+
+Contact Now
+
+</a>
+
+</div>
+
+</section>
 
 <footer>
 
-<h2>PitaFi Hatim</h2>
+<div class="container footer-grid">
+
+<div>
+
+<h2>
+
+PitaFi Hatim
+
+</h2>
 
 <p>
-Helping students learn Mathematics, Programming,
-Artificial Intelligence, and practical digital skills.
+
+Learning Mathematics,
+Programming,
+Artificial Intelligence,
+and Digital Skills.
+
 </p>
 
+</div>
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Categories
+
+</h3>
+
+<ul>
+
+<li>Mathematics</li>
+
+<li>Programming</li>
+
+<li>Artificial Intelligence</li>
+
+<li>Online Earning</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Follow Us
+
+</h3>
+
+<div class="social">
+
+<a href="#">Facebook</a>
+
+<a href="#">YouTube</a>
+
+<a href="#">GitHub</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
 <p>
-© 2026 PitaFi Hatim. All Rights Reserved.
+
+© 2026 PitaFi Hatim.
+All Rights Reserved.
+
 </p>
+
+</div>
 
 </footer>
 
-<script src="script.js"></script>
+<button id="scrollTop">
+
+↑
+
+</button>
+
+<script src="js/script.js"></script>
+
 </body>
+
 </html>
