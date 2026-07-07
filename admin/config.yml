@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: hatimjalal/pitafi-hatim
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "posts/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+
+      - { label: "Category", name: "category", widget: "select", options: ["Mathematics","Programming","Artificial Intelligence","Computer Science","Online Earning"] }
+
+      - { label: "Summary", name: "description", widget: "text" }
+
+      - { label: "Content", name: "body", widget: "markdown" }
