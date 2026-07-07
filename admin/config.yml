@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: khanhatim499.bit/pitafi-hatim
+  repo: khanhatim499-bit/pitafi-hatim
   branch: main
 
 media_folder: "images/uploads"
