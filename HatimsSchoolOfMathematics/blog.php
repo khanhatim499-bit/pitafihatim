@@ -8,8 +8,6 @@ require_once "includes/functions.php";
 include "includes/header.php";
 
 
-// Fetch published posts
-
 $sql = "
 SELECT 
 posts.*,
@@ -37,6 +35,7 @@ $result = mysqli_query($conn,$sql);
 
 <section class="container py">
 
+
 <h1 class="text-center">
 Latest Articles
 </h1>
@@ -47,10 +46,12 @@ Latest Articles
 
 <?php
 
-if(mysqli_num_rows($result) > 0)
+if(mysqli_num_rows($result)>0)
 {
 
-while($post = mysqli_fetch_assoc($result))
+
+while($post=mysqli_fetch_assoc($result))
+
 {
 
 ?>
@@ -59,30 +60,35 @@ while($post = mysqli_fetch_assoc($result))
 <article class="card">
 
 
-<?php if(!empty($post['featured_image'])) { ?>
+<?php
+
+if(!empty($post['featured_image']))
+
+{
+
+?>
 
 <img 
 src="uploads/<?php echo clean($post['featured_image']); ?>"
 alt="<?php echo clean($post['title']); ?>">
 
-<?php } ?>
+
+<?php
+
+}
+
+?>
+
 
 
 <div class="card-content">
 
 
-<h3>
+<h2>
 
 <?php echo clean($post['title']); ?>
 
-</h3>
-
-
-<p>
-
-<?php echo shortText($post['excerpt'],150); ?>
-
-</p>
+</h2>
 
 
 <p>
@@ -101,9 +107,17 @@ By:
 </p>
 
 
+<p>
+
+<?php echo shortText($post['excerpt'],150); ?>
+
+</p>
+
+
+
 <a 
-class="btn"
-href="post.php?slug=<?php echo clean($post['slug']); ?>">
+href="post.php?slug=<?php echo clean($post['slug']); ?>"
+class="btn">
 
 Read More
 
@@ -116,9 +130,11 @@ Read More
 </article>
 
 
+
 <?php
 
 }
+
 
 }
 
@@ -132,12 +148,8 @@ else
 <div class="card">
 
 <h3>
-No Articles Found
+No articles published yet
 </h3>
-
-<p>
-Articles will appear here after publishing from the admin panel.
-</p>
 
 </div>
 
@@ -150,6 +162,7 @@ Articles will appear here after publishing from the admin panel.
 
 
 </div>
+
 
 </section>
 
