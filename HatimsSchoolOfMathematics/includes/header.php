@@ -10,9 +10,9 @@ if (!isset($pageTitle)) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><?php echo htmlspecialchars($pageTitle); ?></title>
+<title><?php echo htmlspecialchars($pageTitle); ?> | Hatim Education Site</title>
 
-<meta name="description" content="Hatim Education Site - Mathematics, Programming, Technology, AI, Notes, Tutorials and Exam Preparation.">
+<meta name="description" content="Learn Mathematics, Programming, AI, Web Development, Technology, Tutorials, Notes and Exam Preparation.">
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -27,11 +27,9 @@ if (!isset($pageTitle)) {
     <div class="container">
 
         <div class="logo">
-
             <a href="index.php">
-                Hatim <span>Education Site</span>
+                <strong>Hatim</strong> Education Site
             </a>
-
         </div>
 
         <nav>
@@ -39,6 +37,8 @@ if (!isset($pageTitle)) {
             <ul>
 
                 <li><a href="index.php">Home</a></li>
+
+                <li><a href="about.php">About</a></li>
 
                 <li><a href="blog.php">Blog</a></li>
 
@@ -61,8 +61,7 @@ if (!isset($pageTitle)) {
                 <input
                     type="text"
                     name="search"
-                    placeholder="Search..."
-                >
+                    placeholder="Search...">
 
                 <button type="submit">
                     Search
@@ -71,7 +70,7 @@ if (!isset($pageTitle)) {
             </form>
 
             <a href="admin/login.php" class="login-btn">
-                Login
+                Admin Login
             </a>
 
         </div>
