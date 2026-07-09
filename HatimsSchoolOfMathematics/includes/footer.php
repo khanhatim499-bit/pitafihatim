@@ -1,65 +1,71 @@
+</main>
+
 <footer class="site-footer">
 
-    <div class="container footer-grid">
+    <div class="container footer-container">
 
-        <div class="footer-box">
+        <div class="footer-column">
 
-            <h3>Hatim's School of Mathematics</h3>
+            <h3>Hatim Education Site</h3>
 
             <p>
-                Learn mathematics through quality notes, solved examples,
-                tutorials, blog articles and educational resources.
+                Learn Mathematics, Programming, Artificial Intelligence,
+                Web Development, Computer Science, Technology,
+                and Exam Preparation from one modern educational platform.
             </p>
 
         </div>
 
-        <div class="footer-box">
+        <div class="footer-column">
 
             <h3>Quick Links</h3>
 
             <ul>
 
-                <li><a href="<?php echo SITE_URL; ?>">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/about.php">About</a></li>
+                <li><a href="about.php">About</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/blog.php">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/notes.php">Notes</a></li>
+                <li><a href="tutorials.php">Tutorials</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/contact.php">Contact</a></li>
+                <li><a href="notes.php">Notes</a></li>
+
+                <li><a href="downloads.php">Downloads</a></li>
+
+                <li><a href="contact.php">Contact</a></li>
 
             </ul>
 
         </div>
 
-        <div class="footer-box">
+        <div class="footer-column">
 
             <h3>Categories</h3>
 
             <ul>
 
-                <li><a href="#">Algebra</a></li>
-
-                <li><a href="#">Calculus</a></li>
-
-                <li><a href="#">Geometry</a></li>
-
-                <li><a href="#">Statistics</a></li>
-
-                <li><a href="#">Class 9–12</a></li>
+                <li>Mathematics</li>
+                <li>Programming</li>
+                <li>Artificial Intelligence</li>
+                <li>Technology</li>
+                <li>Web Development</li>
+                <li>Exam Preparation</li>
 
             </ul>
 
         </div>
 
-        <div class="footer-box">
+        <div class="footer-column">
 
             <h3>Contact</h3>
 
-            <p>Email: info@hatimeducationsite.infinityfree.me</p>
+            <p>Email: khaanhatim499@gmail.com</p>
 
-            <p>Pakistan</p>
+            <p>Website:
+                hatimeducationsite.infinityfree.me
+            </p>
 
         </div>
 
@@ -68,15 +74,20 @@
     <div class="footer-bottom">
 
         <p>
-            © <?php echo date("Y"); ?> Hatim's School of Mathematics.
+
+            &copy; <?php echo date("Y"); ?>
+
+            Hatim Education Site.
+
             All Rights Reserved.
+
         </p>
 
     </div>
 
 </footer>
 
-<script src="/js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
