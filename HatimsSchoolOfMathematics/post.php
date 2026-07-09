@@ -2,82 +2,166 @@
 
 $pageTitle = "Article";
 
-include 'includes/header.php';
+require_once "includes/db.php";
+require_once "includes/functions.php";
+
+include "includes/header.php";
+
+
+// Check slug
+
+if(!isset($_GET['slug']))
+{
+    redirect("blog.php");
+}
+
+
+$slug = clean($_GET['slug']);
+
+
+// Get post data
+
+$sql = "
+SELECT 
+posts.*,
+categories.name AS category_name,
+users.full_name AS author_name
+
+FROM posts
+
+LEFT JOIN categories
+ON posts.category_id = categories.id
+
+LEFT JOIN users
+ON posts.author_id = users.id
+
+WHERE posts.slug='$slug'
+AND posts.status='published'
+
+LIMIT 1
+";
+
+
+$result = mysqli_query($conn,$sql);
+
+
+
+if(mysqli_num_rows($result)==0)
+{
+
+echo "
+
+<section class='container py'>
+
+<h1>
+Article Not Found
+</h1>
+
+<p>
+The article you are looking for does not exist.
+</p>
+
+</section>
+
+";
+
+
+include "includes/footer.php";
+
+exit();
+
+}
+
+
+
+$post = mysqli_fetch_assoc($result);
+
+
 
 ?>
 
 <section class="container py">
 
-    <article class="single-post card">
 
-        <div class="post-content">
-
-            <h1>
-                Article Title Will Appear Here
-            </h1>
-
-            <div class="post-meta">
-
-                <span>
-                    Category: Technology
-                </span>
-
-                <span>
-                    Author: Hatim
-                </span>
-
-                <span>
-                    Date: <?php echo date("F d, Y"); ?>
-                </span>
-
-            </div>
+<article class="single-post card">
 
 
-            <img 
-            src="images/default-blog.jpg" 
-            alt="Article Image">
+<?php
+
+if(!empty($post['featured_image']))
+{
+
+?>
+
+<img 
+src="uploads/<?php echo clean($post['featured_image']); ?>"
+alt="<?php echo clean($post['title']); ?>">
+
+<?php
+
+}
+
+?>
 
 
-            <p>
-                This is where your complete article content
-                will appear from the database.
-            </p>
+<div class="post-content">
 
 
-            <p>
-                Later this page will automatically load:
-            </p>
+<h1>
 
-            <ul>
+<?php echo clean($post['title']); ?>
 
-                <li>Article title</li>
-                <li>Featured image</li>
-                <li>Author name</li>
-                <li>Category</li>
-                <li>Publication date</li>
-                <li>Full content</li>
-
-            </ul>
+</h1>
 
 
-        </div>
-
-    </article>
+<div class="post-meta">
 
 
-    <section class="comments">
+<p>
 
-        <h2>
-            Comments
-        </h2>
+Category:
+<?php echo clean($post['category_name']); ?>
 
-
-        <p>
-            Comments system will be connected with the database.
-        </p>
+</p>
 
 
-    </section>
+<p>
+
+Author:
+<?php echo clean($post['author_name']); ?>
+
+</p>
+
+
+<p>
+
+Published:
+<?php echo formatDate($post['created_at']); ?>
+
+</p>
+
+
+</div>
+
+
+
+<div class="article-body">
+
+<?php
+
+echo nl2br($post['content']);
+
+?>
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
 
 
 </section>
@@ -85,6 +169,6 @@ include 'includes/header.php';
 
 <?php
 
-include 'includes/footer.php';
+include "includes/footer.php";
 
 ?>
