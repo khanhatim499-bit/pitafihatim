@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/config.php';
+if (!isset($pageTitle)) {
+    $pageTitle = "Hatim Education Site";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +10,13 @@ require_once __DIR__ . '/config.php';
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><?php echo SITE_NAME; ?></title>
+<title><?php echo htmlspecialchars($pageTitle); ?></title>
 
-<meta name="description" content="Hatim's School of Mathematics - Learn Mathematics with notes, blogs, solved examples and tutorials.">
+<meta name="description" content="Hatim Education Site - Mathematics, Programming, Technology, AI, Notes, Tutorials and Exam Preparation.">
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="icon" href="images/favicon.png">
 
 </head>
 
@@ -24,8 +28,8 @@ require_once __DIR__ . '/config.php';
 
         <div class="logo">
 
-            <a href="<?php echo SITE_URL; ?>">
-                Hatim's School of Mathematics
+            <a href="index.php">
+                Hatim <span>Education Site</span>
             </a>
 
         </div>
@@ -34,17 +38,17 @@ require_once __DIR__ . '/config.php';
 
             <ul>
 
-                <li><a href="<?php echo SITE_URL; ?>">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/about.php">About</a></li>
+                <li><a href="blog.php">Blog</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/blog.php">Blog</a></li>
+                <li><a href="tutorials.php">Tutorials</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/notes.php">Notes</a></li>
+                <li><a href="notes.php">Notes</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/category.php">Categories</a></li>
+                <li><a href="downloads.php">Downloads</a></li>
 
-                <li><a href="<?php echo SITE_URL; ?>/contact.php">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
 
             </ul>
 
@@ -52,7 +56,7 @@ require_once __DIR__ . '/config.php';
 
         <div class="header-right">
 
-            <form action="<?php echo SITE_URL; ?>/search.php" method="GET">
+            <form action="search.php" method="GET">
 
                 <input
                     type="text"
@@ -60,11 +64,13 @@ require_once __DIR__ . '/config.php';
                     placeholder="Search..."
                 >
 
-                <button type="submit">Search</button>
+                <button type="submit">
+                    Search
+                </button>
 
             </form>
 
-            <a class="login-btn" href="<?php echo SITE_URL; ?>/login.php">
+            <a href="admin/login.php" class="login-btn">
                 Login
             </a>
 
@@ -73,3 +79,5 @@ require_once __DIR__ . '/config.php';
     </div>
 
 </header>
+
+<main>
