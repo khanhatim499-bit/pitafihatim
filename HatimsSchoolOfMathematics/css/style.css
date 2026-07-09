@@ -1,0 +1,283 @@
+/* ===========================================================
+   Hatim's School of Mathematics
+   Professional Educational Website
+   Version: 1.0
+   Author: Hatim Jalal
+===========================================================*/
+
+/* ==========================
+   GOOGLE FONTS
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root{
+
+    --primary:#1E3A8A;
+    --secondary:#F59E0B;
+    --accent:#0EA5E9;
+
+    --white:#ffffff;
+    --light:#f8fafc;
+    --dark:#1f2937;
+    --gray:#6b7280;
+    --border:#e5e7eb;
+
+    --radius:10px;
+
+    --shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+    --transition:.3s ease;
+
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+/* ==========================
+   IMAGES
+========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+
+h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+h4{
+
+    font-size:20px;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================
+   PARAGRAPH
+========================== */
+
+p{
+
+    margin-bottom:15px;
+
+    color:var(--gray);
+
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+section{
+
+    padding:80px 0;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:var(--accent);
+
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table th,
+table td{
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+
+    background:#fff;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+/* ==========================
+   UTILITIES
+========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.py{
+
+    padding:80px 0;
+
+}
