@@ -102,3 +102,125 @@ CREATE TABLE `posts` (
     ON DELETE CASCADE
 
 );
+CREATE TABLE `media` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `file_name` VARCHAR(255) NOT NULL,
+
+    `file_path` VARCHAR(255) NOT NULL,
+
+    `file_type` VARCHAR(100),
+
+    `uploaded_by` INT UNSIGNED NOT NULL,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (uploaded_by)
+    REFERENCES users(id)
+    ON DELETE CASCADE
+
+);
+
+CREATE TABLE `downloads` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `title` VARCHAR(255) NOT NULL,
+
+    `description` TEXT,
+
+    `file_path` VARCHAR(255) NOT NULL,
+
+    `category_id` INT UNSIGNED,
+
+    `downloads` INT DEFAULT 0,
+
+    `status`
+    ENUM('published','draft')
+    DEFAULT 'published',
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (category_id)
+    REFERENCES categories(id)
+    ON DELETE SET NULL
+
+);
+
+CREATE TABLE `comments` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `post_id` INT UNSIGNED NOT NULL,
+
+    `name` VARCHAR(100) NOT NULL,
+
+    `email` VARCHAR(150),
+
+    `comment` TEXT NOT NULL,
+
+    `status`
+    ENUM('pending','approved')
+    DEFAULT 'pending',
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (post_id)
+    REFERENCES posts(id)
+    ON DELETE CASCADE
+
+);
+
+CREATE TABLE `contact_messages` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `name` VARCHAR(100) NOT NULL,
+
+    `email` VARCHAR(150) NOT NULL,
+
+    `subject` VARCHAR(255) NOT NULL,
+
+    `message` TEXT NOT NULL,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE `newsletter` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `email` VARCHAR(150) NOT NULL UNIQUE,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE `settings` (
+
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `site_name` VARCHAR(150) NOT NULL,
+
+    `site_description` TEXT,
+
+    `site_email` VARCHAR(150),
+
+    `logo` VARCHAR(255),
+
+    `favicon` VARCHAR(255),
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+COMMIT;y
+
