@@ -1,75 +1,104 @@
 -- =====================================================
--- Hatim Education Site Database
--- Version: 1.0
+-- Hatim Education Site
+-- Database Version 1.0
 -- =====================================================
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
--- ==========================================
--- USERS TABLE
--- ==========================================
+CREATE DATABASE IF NOT EXISTS `if0_42367222_hatim_site`
+DEFAULT CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
 
+USE `if0_42367222_hatim_site`;
 CREATE TABLE `users` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `full_name` VARCHAR(100) NOT NULL,
-  `username` VARCHAR(50) NOT NULL UNIQUE,
-  `email` VARCHAR(100) NOT NULL UNIQUE,
-  `password` VARCHAR(255) NOT NULL,
-  `role` ENUM('admin','editor') NOT NULL DEFAULT 'admin',
-  `profile_image` VARCHAR(255) DEFAULT NULL,
-  `status` TINYINT(1) NOT NULL DEFAULT 1,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- ==========================================
--- CATEGORIES TABLE
--- ==========================================
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 
+    `full_name` VARCHAR(100) NOT NULL,
+
+    `username` VARCHAR(50) NOT NULL UNIQUE,
+
+    `email` VARCHAR(100) NOT NULL UNIQUE,
+
+    `password` VARCHAR(255) NOT NULL,
+
+    `role` ENUM('admin','editor')
+    DEFAULT 'admin',
+
+    `profile_image` VARCHAR(255) DEFAULT NULL,
+
+    `status` TINYINT(1)
+    DEFAULT 1,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
 CREATE TABLE `categories` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(100) NOT NULL,
-  `slug` VARCHAR(120) NOT NULL UNIQUE,
-  `description` TEXT DEFAULT NULL,
-  `status` TINYINT(1) NOT NULL DEFAULT 1,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- ==========================================
--- POSTS TABLE
--- ==========================================
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+    `name` VARCHAR(100) NOT NULL,
+
+    `slug` VARCHAR(120) NOT NULL UNIQUE,
+
+    `description` TEXT,
+
+    `status` TINYINT(1)
+    DEFAULT 1,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
 
 CREATE TABLE `posts` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `category_id` INT UNSIGNED NOT NULL,
-  `author_id` INT UNSIGNED NOT NULL,
-  `title` VARCHAR(255) NOT NULL,
-  `slug` VARCHAR(255) NOT NULL UNIQUE,
-  `excerpt` TEXT DEFAULT NULL,
-  `content` LONGTEXT NOT NULL,
-  `featured_image` VARCHAR(255) DEFAULT NULL,
-  `post_type` ENUM('blog','tutorial','note','news') NOT NULL DEFAULT 'blog',
-  `status` ENUM('draft','published') NOT NULL DEFAULT 'draft',
-  `views` INT UNSIGNED NOT NULL DEFAULT 0,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-  PRIMARY KEY (`id`),
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 
-  CONSTRAINT `fk_post_category`
-    FOREIGN KEY (`category_id`)
-    REFERENCES `categories`(`id`)
+    `category_id` INT UNSIGNED NOT NULL,
+
+    `author_id` INT UNSIGNED NOT NULL,
+
+    `title` VARCHAR(255) NOT NULL,
+
+    `slug` VARCHAR(255) NOT NULL UNIQUE,
+
+    `excerpt` TEXT,
+
+    `content` LONGTEXT NOT NULL,
+
+    `featured_image`
+    VARCHAR(255),
+
+    `post_type`
+    ENUM(
+        'blog',
+        'tutorial',
+        'note',
+        'news'
+    ) DEFAULT 'blog',
+
+    `status`
+    ENUM(
+        'draft',
+        'published'
+    ) DEFAULT 'draft',
+
+    `views`
+    INT DEFAULT 0,
+
+    `created_at`
+    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY(category_id)
+    REFERENCES categories(id)
     ON DELETE CASCADE,
 
-  CONSTRAINT `fk_post_author`
-    FOREIGN KEY (`author_id`)
-    REFERENCES `users`(`id`)
+    FOREIGN KEY(author_id)
+    REFERENCES users(id)
     ON DELETE CASCADE
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-COMMIT;
+);
